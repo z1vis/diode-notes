@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>二極體導通判斷｜二極體解題筆記</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="shell" aria-label="網站導覽">
+      <a class="brand" href="../index.html">二極體解題筆記</a>
+      <span class="course">電子學（一）</span>
+    </nav>
+  </header>
+  <main class="shell lesson">
+    <header>
+      <p class="eyebrow">直流電路</p>
+      <h1>二極體導通判斷</h1>
+      <p class="lede">用二極體電流的方向，驗證一開始的導通假設。</p>
+    </header>
+    <section>
+      <h2>核心觀念</h2>
+      <p>使用矽二極體的定壓降模型。電壓定義為 V<sub>D</sub> = V<sub>A</sub> − V<sub>K</sub>，電流 I<sub>D</sub> 的正方向由陽極 A 指向陰極 K。導通時 V<sub>D</sub> = 0.7 V，且 I<sub>D</sub> 應為正。截止時 I<sub>D</sub> = 0，算出的 V<sub>D</sub> 應不高於 0.7 V。在 0.7 V 且電流為零時，電路位於模型的導通邊界。</p>
+    </section>
+    <section>
+      <h2>判斷流程</h2>
+      <ol>
+        <li>標出 A、K 及 I<sub>D</sub> 的正方向。</li>
+        <li>先假設其中一種狀態，代入對應的模型。</li>
+        <li>解節點電壓或支路電流，再檢查該狀態的條件。若條件不成立，換另一種狀態重算。</li>
+      </ol>
+    </section>
+    <section>
+      <h2>例題</h2>
+      <p>5 V 電源經 1 kΩ 上拉電阻連到節點 X。二極體陽極接 X，陰極接地。求 V<sub>X</sub> 和 I<sub>D</sub>。</p>
+      <p>假設二極體導通，V<sub>X</sub> = V<sub>K</sub> + V<sub>D</sub> = 0.7 V。電阻與二極體的電流相同。</p>
+      <p class="formula">I<sub>D</sub> = (V<sub>S</sub> − V<sub>X</sub>) / R = (5 − 0.7) V / 1 kΩ = 4.3 mA</p>
+      <p><strong>答案</strong> V<sub>X</sub> = 0.7 V，I<sub>D</sub> = 4.3 mA。電流由 A 流向 K，符合導通假設。</p>
+    </section>
+    <section>
+      <h2>常見錯誤</h2>
+      <p>直接把 5 V 當成電阻壓降。電阻兩端電壓分別是 5 V 和 0.7 V，所以壓降是 4.3 V。</p>
+    </section>
+    <footer class="lesson-footer"><a href="../index.html">← 返回筆記目錄</a></footer>
+  </main>
+</body>
+</html>
